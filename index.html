@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoVogue Haven | Produtos Sustentáveis</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+    <custom-navbar></custom-navbar>
+
+    <main>
+      
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Moda Consciente Para Um Mundo Melhor</h1>
+                <p>Produtos eco-friendly que combinam estilo e sustentabilidade</p>
+                <a href="#products" class="btn">Conheça nossos produtos</a>
+            </div>
+        </section>
+
+        
+        <section id="products" class="products-section">
+            <h2>Nossos Produtos Sustentáveis</h2>
+            <div class="products-grid">
+                <custom-product-card
+                    image="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" 
+                    title="Camiseta Orgânica" 
+                    price="89.90" 
+                    description="Feita 100% com algodão orgânico e tintas naturais."
+                    category="Vestuário">
+                </custom-product-card>
+                
+                <custom-product-card 
+                    image="https://cdn.pixabay.com/photo/2019/01/06/20/23/non-woven-bags-3917805_1280.jpg" 
+                    title="Eco Bag Reutilizável" 
+                    price="49.90" 
+                    description="Resistente e estilosa, perfeita para substituir plásticos."
+                    category="Acessórios">
+                </custom-product-card>
+                
+                <custom-product-card 
+                    image="https://images.pexels.com/photos/25686144/pexels-photo-25686144.jpeg" 
+                    title="Canudo de Bambu" 
+                    price="29.90" 
+                    description="Kit com 4 canudos e escova de limpeza."
+                    category="Casa">
+                </custom-product-card>
+                
+                <custom-product-card 
+                    image="https://images.pexels.com/photos/8140898/pexels-photo-8140898.jpeg" 
+                    title="Cosméticos Naturais" 
+                    price="59.90" 
+                    description="Kit shampoo e condicionador vegano e cruelty-free."
+                    category="Beleza">
+                </custom-product-card>
+                <custom-product-card 
+                    image="https://media.istockphoto.com/id/1172688528/photo/reusable-water-bottle-on-a-wooden-table-outdoors.jpg?b=1&s=612x612&w=0&k=20&c=usHI2rtpJIdAD3Cwen_BJX4h3YoyA7FgPsh_wN6zy3U=" 
+                    title="Garrafa de Inox Sustentável" 
+                    price="79.90" 
+                    description="Mantém a bebida gelada por horas e reduz o uso de plástico descartável."
+                    category="Acessórios">
+                </custom-product-card>
+
+                <custom-product-card 
+                image="https://images.pexels.com/photos/7879763/pexels-photo-7879763.jpeg" 
+                    title="Kit de Talheres de Bambu" 
+                    price="39.90" 
+                    description="Talheres 100% biodegradáveis com estojo reutilizável."
+                    category="Casa">
+                </custom-product-card>
+            </div>
+        </section>
+
+        
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <h2>Sobre Nós</h2>
+                <p>Na EcoVogue Haven, acreditamos que moda e sustentabilidade podem andar juntas. Fundada em 2020, nossa missão é oferecer produtos que respeitam o meio ambiente sem abrir mão do estilo e qualidade.</p>
+                <p>Todos nossos fornecedores são certificados e compartilham dos mesmos valores éticos e ecológicos que defendemos.</p>
+                <div class="eco-values">
+                    <div class="value-item">
+                        <i class="fas fa-leaf"></i>
+                        <span>Matérias-primas sustentáveis</span>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-recycle"></i>
+                        <span>Embalagens recicláveis</span>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span>Comércio justo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image"></div>
+        </section>
+
+
+        <section id="contact" class="contact-section">
+            <h2>Entre em Contato</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Seu nome" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Seu e-mail" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Sua mensagem" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+                <div id="form-status"></div>
+            </form>
+        </section>
+        
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/product-card.js"></script>
+    <script src="components/footer.js"></script>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

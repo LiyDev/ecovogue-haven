@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra | EcoVogue Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+</head>
+<body>
+    <custom-navbar></custom-navbar>
+
+    <main class="checkout-container">
+        <h1>Finalizar Compra</h1>
+        
+        <div class="checkout-grid">
+            <section class="product-details">
+                <h2>Detalhes do Produto</h2>
+                <div class="product-info">
+                    <div class="product-image" id="checkout-product-image"></div>
+                    <div class="product-text">
+                        <h3 id="checkout-product-title"></h3>
+                        <div class="price" id="checkout-product-price"></div>
+                        <p id="checkout-product-description"></p>
+                    </div>
+                </div>
+
+                <div class="quantity-selector">
+                    <label for="quantity">Quantidade:</label>
+                    <select id="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="delivery-info">
+                    <h3>Informações de Entrega</h3>
+                    <div class="delivery-options">
+                        <div class="delivery-option">
+                            <input type="radio" id="standard" name="delivery" value="standard" checked>
+                            <label for="standard">
+                                <span>Entrega Padrão</span>
+                                <span>5-7 dias úteis - R$ 15,00</span>
+                            </label>
+                        </div>
+                        <div class="delivery-option">
+                            <input type="radio" id="express" name="delivery" value="express">
+                            <label for="express">
+                                <span>Entrega Expressa</span>
+                                <span>2-3 dias úteis - R$ 30,00</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="payment-section">
+                <h2>Método de Pagamento</h2>
+                
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <input type="radio" id="credit-card" name="payment" value="credit-card" checked>
+                        <label for="credit-card">
+                            <i class="far fa-credit-card"></i>
+                            <span>Cartão de Crédito</span>
+                        </label>
+                        <div class="credit-card-form">
+                            <div class="form-group">
+                                <label for="card-number">Número do Cartão</label>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-name">Nome no Cartão</label>
+                                <input type="text" id="card-name" placeholder="Nome como escrito no cartão">
+                            </div>
+                            <div class="card-details">
+                                <div class="form-group">
+                                    <label for="expiry-date">Validade</label>
+                                    <input type="text" id="expiry-date" placeholder="MM/AA">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-method">
+                        <input type="radio" id="pix" name="payment" value="pix">
+                        <label for="pix">
+                            <i class="fas fa-qrcode"></i>
+                            <span>PIX</span>
+                        </label>
+                        <div class="pix-info">
+                            <p>Você será redirecionado para finalizar o pagamento via PIX após confirmar a compra.</p>
+                        </div>
+                    </div>
+
+                    <div class="payment-method">
+                        <input type="radio" id="boleto" name="payment" value="boleto">
+                        <label for="boleto">
+                            <i class="fas fa-barcode"></i>
+                            <span>Boleto Bancário</span>
+                        </label>
+                        <div class="boleto-info">
+                            <p>O boleto será gerado após a confirmação da compra e enviado para seu e-mail.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h3>Resumo do Pedido</h3>
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span id="subtotal">R$ 0,00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Frete</span>
+                        <span id="shipping">R$ 15,00</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span id="total">R$ 0,00</span>
+                    </div>
+
+                    <button class="btn confirm-btn">Confirmar Compra</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <custom-footer></custom-footer>
+
+    <script src="components/navbar.js"></script> 
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script> 
+    <script src="checkout.js"></script>
+</body>
+</html>
